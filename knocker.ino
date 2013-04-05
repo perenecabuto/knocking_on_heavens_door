@@ -1,16 +1,16 @@
 /* encoding: utf-8 */
 
 const uint8_t PIEZO = A0;
-const uint32_t KNOCK_CYCLE = 50;
-const uint32_t SHORT_INTERVAL = 200;
-const uint32_t MEDIUM_INTERVAL = 400;
+const uint16_t KNOCK_CYCLE = 50;
+const uint16_t SHORT_INTERVAL = 200;
+const uint16_t MEDIUM_INTERVAL = 400;
 
-uint32_t knockVal;
-uint32_t knockInterval;
+uint16_t knockVal;
+uint16_t knockInterval;
 uint32_t lastKnock = 0;
 uint32_t currentKnock = 0;
 
-String getIntervalLengthName(uint32_t interval);
+String getIntervalLengthName(uint16_t interval);
 
 
 void setup(){
@@ -34,7 +34,7 @@ void loop(){
             Serial.println("------------");
         }
 
-        Serial.print(getIntervalLengthName(knockInterval) + " :");
+        Serial.print(getIntervalLengthName(knockInterval) + " :\t");
         Serial.print("Knock at ");
         Serial.print(knockInterval, DEC);
         Serial.println("ms");
@@ -44,7 +44,7 @@ void loop(){
 }
 
 
-String getIntervalLengthName(uint32_t interval) {
+String getIntervalLengthName(uint16_t interval) {
     String intervalLengthName = "LONG";
 
     if (interval >= 0 && interval < SHORT_INTERVAL) {
