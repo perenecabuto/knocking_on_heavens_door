@@ -38,4 +38,4 @@ nosetests.xml
 *.sw?
 
 # Arduino build
-build-*/
+#build-*/
