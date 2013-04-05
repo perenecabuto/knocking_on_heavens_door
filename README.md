@@ -1,6 +1,30 @@
 Tests under Fedora 17
 +++++++++++++++++++++
 
+Arduino
+=======
+
+knoker.ino -> code for arduino knoker
+
+## Use arduino IDE or arduino-mk to compile on console
+
+### To install arduino-mk on Debian or Ubuntu
+
+    apt-get install arduino-mk
+
+### To compile
+
+    make
+
+### To upload code to your arduino
+
+    make upload
+
+### To view monitor
+
+    make monitor
+
+
 Record audio
 ============
 

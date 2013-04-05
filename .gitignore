@@ -33,3 +33,9 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+# Vim Swap Files
+*.sw?
+
+# Arduino build
+build-*/
