@@ -45,13 +45,16 @@ void loop(){
 
 
 String getIntervalLengthName(uint16_t interval) {
-    String intervalLengthName = "LONG";
+    String intervalLengthName = "START";
 
-    if (interval >= 0 && interval < SHORT_INTERVAL) {
+    if (interval > 0 && interval < SHORT_INTERVAL) {
         intervalLengthName = "SHORT";
     }
     else if (interval > SHORT_INTERVAL && interval < MEDIUM_INTERVAL) {
         intervalLengthName = "MEDIUM";
+    }
+    else if (interval > MEDIUM_INTERVAL) {
+        intervalLengthName = "LONG";
     }
 
     return intervalLengthName;

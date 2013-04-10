@@ -1,0 +1,5 @@
+1 - Abrir a aporta com batidas
+2 - Gravar padrao
+3 - validar padroes
+4 - led de feedback (vermelho, amarelo e verde)
+5 - Motor/Servo
